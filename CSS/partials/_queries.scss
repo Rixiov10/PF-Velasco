@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    /* estilos para pantallas de 768px de ancho o menos */
+  
+    label {
+      font-size: 14px;
+    }
+  
+    input {
+      &[type="text"], &[type="email"], &[type="password"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+  
+      &[type="submit"] {
+        margin-top: 10px;
+      }
+    }
+  }
+  

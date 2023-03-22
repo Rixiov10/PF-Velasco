@@ -1,0 +1,21 @@
+.encabezado {
+    padding: 20px 40px;
+    background-color: $primaryColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+  }
+  
+  .menu {
+    list-style-type: none;
+    display: flex;
+    gap: 16px;
+  }
+  
+  .logo, .menu__item a {
+    color: white;
+    text-decoration: none;
+  }

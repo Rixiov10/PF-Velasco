@@ -1,0 +1,145 @@
+.seccionPrincipal {
+    background-image: url("../Imagenes/Learning.jpg");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    h2 {
+      background-color: $secondaryColor;
+      padding: 30px;
+      border-radius: 20px;
+  
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .lenguajes {
+    padding: 100px;
+  
+    h2 {
+      margin-bottom: 40px;
+      text-align: center;
+      color: black;
+      background-color: $secondaryColor;
+      padding: 30px;
+      border-radius: 20px;
+  
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  .tarjetas {
+    display: flex;
+    gap: 40px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  
+  .tarjeta {
+    position: relative;
+  }
+  
+  .tarjeta__imagen {
+    border-radius: 12px;
+    width: 325px;
+    height: 250px;
+  }
+  
+  .tarjeta__titulo {
+    position: absolute;
+    bottom: 30px;
+    left: 40%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 16px;
+    border-radius: 20px;
+
+    @include mobile {
+      background-color: $primaryColor;
+    }
+  }
+  
+/* Animaciones */
+
+.tarjeta {
+    &:nth-child(1) .tarjeta__imagen {
+      animation: giro 3s ease-in-out infinite;
+    }
+  
+    &:nth-child(2) .tarjeta__imagen {
+      animation: mover-arriba 1s ease-in-out infinite;
+    }
+  
+    &:nth-child(3) .tarjeta__imagen {
+      animation: desvanecer 1s ease-in-out infinite;
+    }
+  }
+  
+  @keyframes giro {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+   
+  @keyframes mover-arriba {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-10px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+   
+  @keyframes desvanecer {
+    0% {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0.5;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+.carreras {
+  background-image: url("../Imagenes/Carrera.jpg");
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: ". texto";
+}
+
+.carreras__texto {
+  grid-area: texto;
+  color: white;
+  background-color: rgba(16, 22, 47, 0.8);
+  padding: 100px 60px;
+}
+
+.borde {
+  border-bottom: 3px solid white;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
