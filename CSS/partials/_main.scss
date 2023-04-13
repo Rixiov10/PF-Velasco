@@ -5,21 +5,33 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  
+
     h2 {
       background-color: $secondaryColor;
       padding: 30px;
       border-radius: 20px;
+
+      &:hover {
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(206,174,37,1) 50%, rgba(255,255,255,1) 100%);
+      }
   
       a {
         color: #000;
         text-decoration: none;
+        
+        &:hover {
+          font-size: 1.5em;
+          transition: all .3s ease-in-out;
+        }
       }
     }
   }
 
   .lenguajes {
     padding: 100px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(16,22,47,1) 60%);
   
     h2 {
       margin-bottom: 40px;
@@ -28,10 +40,20 @@
       background-color: $secondaryColor;
       padding: 30px;
       border-radius: 20px;
+
+      &:hover {
+        background: rgb(255,255,255);
+        background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(206,174,37,1) 50%, rgba(255,255,255,1) 100%);
+      }
   
       a {
         color: #000;
         text-decoration: none;
+
+        &:hover {
+          font-size: 1.5em;
+          transition: all .3s ease-in-out;
+        }
       }
     }
   }
@@ -54,7 +76,12 @@
     width: 325px;
     height: 250px;
   }
-  
+
+  .tarjeta__imagen:hover {
+    transform: translate(1rem, 1rem);
+    filter: blur(5px);
+  }
+
   .tarjeta__titulo {
     position: absolute;
     bottom: 30px;
@@ -64,14 +91,15 @@
     padding: 16px;
     border-radius: 20px;
 
-    @include mobile {
-      background-color: $primaryColor;
+    a{
+      color: white;
+      text-decoration: none;
     }
   }
   
 /* Animaciones */
 
-.tarjeta {
+/*.tarjeta {
     &:nth-child(1) .tarjeta__imagen {
       animation: giro 3s ease-in-out infinite;
     }
@@ -121,7 +149,7 @@
     100% {
       opacity: 1;
     }
-  }
+  } */
   
 .carreras {
   background-image: url("../Imagenes/Carrera.jpg");
